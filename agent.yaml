@@ -164,6 +164,14 @@ skills:
   - skill-comply
   - skill-host-compat
   - skill-stocktake
+  - hunt-xss
+  - hunt-sqli
+  - hunt-api-misconfig
+  - hunt-idor
+  - hunt-jwt-crypto
+  - security-audit
+  - analyzing-api-gateway-access-logs
+  - analyzing-threat-actor-ttps-with-mitre
   - springboot-patterns
   - springboot-security
   - springboot-tdd
