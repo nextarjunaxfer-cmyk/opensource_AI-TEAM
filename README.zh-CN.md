@@ -6,6 +6,8 @@
 [![Commands](https://img.shields.io/badge/commands-99-lightgrey.svg)](commands)
 [![Node](https://img.shields.io/badge/node-%3E%3D18-informational.svg)](package.json)
 
+**语言：** [English](README.md) | [简体中文](README.zh-CN.md) | [Bahasa Indonesia](README.id.md)
+
 面向 AI 编码 harness 的 **agent、skill 与 command** 集合 —— 基于
 [ECC](https://github.com/affaan-m/ecc)（agent harness operating system）构建，并扩展了
 安全与红队 skill 包。
@@ -19,7 +21,7 @@
 | Command | **99** | `commands/` —— 兼容性 slash command |
 | Hook | — | `hooks/` —— 基于触发器的自动化 |
 | Rule | — | `rules/` —— 必须遵循的准则（通用 + 按语言） |
-| MCP 配置 | 14 | `mcp-configs/` |
+| MCP server | 37 | `mcp-configs/mcp-servers.json` —— 单个 server 定义文件 |
 
 ## Skill 包
 
@@ -86,6 +88,24 @@ yarn test        # 校验器 + 测试套件
 3. **编写 frontmatter**，包含 `name` 与 `description`。description 需说明该 skill
    做什么**以及**何时应被激活 —— agent 依据这段文字决定是否加载。
 4. **保持自包含**：流程、命令与预期输出写入 `SKILL.md`，辅助文件放在同一目录。
+
+最小骨架示例：
+
+```markdown
+---
+name: reviewing-terraform-plans
+description: Reviews Terraform plan output for destructive changes and drift.
+  Use when a plan is attached to a pull request or infrastructure changes are proposed.
+---
+
+# Reviewing Terraform Plans
+
+1. Confirm the plan targets the expected workspace and environment.
+2. List every resource marked for replacement or destruction.
+3. Flag changes that remove stateful resources without a migration step.
+4. Report findings ordered by blast radius, with the plan excerpt for each.
+```
+
 5. **提 PR 前先校验**：
 
    ```bash
