@@ -1,0 +1,86 @@
+# NOTICE
+
+opensource_AI-TEAM
+Copyright (c) 2026 nextarjunaxfer-cmyk
+
+This repository is distributed under the MIT License (see `LICENSE`). It contains
+material derived from the projects listed below. Their copyright notices and license
+terms are reproduced or referenced here as required by those licenses.
+
+---
+
+## 1. ECC — agent harness operating system
+
+- Source: https://github.com/affaan-m/ecc
+- Copyright (c) 2026 Affaan Mustafa
+- License: MIT
+
+The agents, commands, hooks, rules, scripts, and the majority of the skills in this
+repository originate from ECC.
+
+```
+MIT License
+
+Copyright (c) 2026 Affaan Mustafa
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 2. Claude-BugHunter
+
+- Source: https://github.com/elementalsouls/Claude-BugHunter
+- Copyright (c) 2026 Sachin Sharma
+- License: dual-licensed — MIT for code (`docs/licenses/Claude-BugHunter-MIT.txt`)
+  and CC BY 4.0 for documentation and skill content (`docs/licenses/CC-BY-4.0.txt`)
+
+83 skills imported into `skills/`. Skill content is redistributed under
+CC BY 4.0; attribution is provided in this file.
+
+---
+
+## 3. security-audit-skill
+
+- Source: https://github.com/cloudflare/security-audit-skill
+- Copyright (c) 2025-2026 Cloudflare, Inc.
+- License: MIT (`docs/licenses/security-audit-skill-MIT.txt`)
+
+1 skill imported into `skills/`.
+
+---
+
+## 4. Anthropic-Cybersecurity-Skills
+
+- Source: https://github.com/mukul975/Anthropic-Cybersecurity-Skills
+- Copyright 2026 mukul975 (Mahipal)
+- License: Apache License 2.0 (`docs/licenses/Apache-2.0.txt`)
+
+818 skills imported into `skills/`. A copy of the Apache License 2.0 is included at
+`docs/licenses/Apache-2.0.txt`. This project does not modify the licensed skill
+content beyond directory placement; no NOTICE file was provided by the upstream
+project.
+
+---
+
+## Security skill usage
+
+The security and red-team skills included here are intended solely for authorized
+security testing, defensive research, and education. Do not use them against systems
+you do not own or have explicit written permission to test. See `SECURITY.md`.

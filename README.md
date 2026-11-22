@@ -1,82 +1,82 @@
 # opensource_AI-TEAM
 
-Kumpulan **agent, skill, dan command** untuk AI coding harness — dibangun di atas
-[ECC](https://github.com/affaan-m/ecc) (agent harness operating system) dan diperluas
-dengan paket skill keamanan serta red-team.
+A collection of **agents, skills, and commands** for AI coding harnesses — built on top of
+[ECC](https://github.com/affaan-m/ecc) (the agent harness operating system) and extended
+with security and red-team skill packs.
 
-Repo ini berisi:
+What this repository ships:
 
-| Komponen | Jumlah | Lokasi |
+| Component | Count | Location |
 |---|---|---|
-| Skill | **1230** | `skills/` — tiap skill adalah direktori berisi `SKILL.md` berfrontmatter |
-| Agent | **72** | `agents/` — subagent khusus per domain (planner, reviewer, build resolver, dll.) |
-| Command | **99** | `commands/` — slash command kompatibilitas |
-| Hook | — | `hooks/` — otomasi berbasis trigger |
-| Rules | — | `rules/` — pedoman wajib (umum + per bahasa) |
-| MCP config | 14 | `mcp-configs/` |
+| Skills | **1230** | `skills/` — each skill is a directory containing a frontmattered `SKILL.md` |
+| Agents | **72** | `agents/` — domain-specific subagents (planner, reviewers, build resolvers, etc.) |
+| Commands | **99** | `commands/` — compatibility slash commands |
+| Hooks | — | `hooks/` — trigger-based automations |
+| Rules | — | `rules/` — always-follow guidelines (common + per language) |
+| MCP configs | 14 | `mcp-configs/` |
 
-## Paket skill
+## Skill packs
 
-Selain skill inti ECC, repo ini menyertakan tiga paket skill eksternal yang diimpor
-sebagai skill default (Total 902 skill tambahan):
+Beyond the core ECC skills, this repository bundles three external skill packs as default
+skills (902 additional skills in total):
 
-- **Claude-BugHunter** (83 skill) — bug hunting dan web/app security testing
-- **security-audit-skill** (1 skill) — alur audit keamanan
-- **Anthropic-Cybersecurity-Skills** (818 skill) — perpustakaan besar skill keamanan:
-  forensik, malware analysis, threat hunting, cloud/AD security, DFIR, compliance,
-  exploit analysis, dan red-team tradecraft
+- **Claude-BugHunter** (83 skills) — bug hunting and web/application security testing
+- **security-audit-skill** (1 skill) — end-to-end security audit workflow
+- **Anthropic-Cybersecurity-Skills** (818 skills) — a large cybersecurity skill library:
+  forensics, malware analysis, threat hunting, cloud/AD security, DFIR, compliance,
+  exploit analysis, and red-team tradecraft
 
-Skill keamanan/red-team hanya untuk pengujian yang sah dan diizinkan (authorized
-security testing). Lihat `SECURITY.md`.
+Security and red-team skills are intended for authorized security testing only. See
+`SECURITY.md`.
 
-## Mulai cepat
+## Quick start
 
-Prasyarat: **Node.js >= 18** (disarankan 22+) dan `yarn@4.9.2` (via corepack).
+Requirements: **Node.js >= 18** (22+ recommended) and `yarn@4.9.2` (via corepack).
 
 ```bash
-yarn install                 # atau: npm install
+yarn install                 # or: npm install
 node scripts/ecc.js --help   # CLI
 ```
 
-Instal ke harness target (contoh Claude Code):
+Install into a target harness (Claude Code shown):
 
 ```bash
 node scripts/ecc.js install --profile developer --target claude --no-hooks
 ```
 
-Perintah lain yang sering dipakai:
+Other frequently used commands:
 
 ```bash
-node scripts/ecc.js status            # ringkasan instalasi
+node scripts/ecc.js status            # installation summary
 node scripts/ecc.js doctor --target claude
 ```
 
-## Struktur repo
+## Repository layout
 
 ```
-agents/          subagent khusus domain
-skills/          workflow & domain knowledge (sumber utama)
-commands/        slash command (permukaan kompatibilitas)
-hooks/           otomasi trigger
-rules/           pedoman selalu-dipakai
-scripts/         utilitas Node.js lintas platform
-mcp-configs/     konfigurasi server MCP
+agents/          domain-specific subagents
+skills/          workflows and domain knowledge (canonical surface)
+commands/        slash commands (compatibility surface)
+hooks/           trigger automations
+rules/           always-follow guidelines
+scripts/         cross-platform Node.js utilities
+mcp-configs/     MCP server configurations
 tests/           test suite
-docs/            dokumentasi
+docs/            documentation
 ```
 
-## Pengembangan
+## Development
 
 ```bash
-yarn test        # validator + test suite
+yarn test        # validators + test suite
 ```
 
-Kontribusi workflow baru masuk ke `skills/` terlebih dahulu (kebijakan skills-first).
+New workflow contributions land in `skills/` first (skills-first policy).
 
-## Lisensi
+## License
 
-MIT — lihat [LICENSE](LICENSE).
+MIT — see [LICENSE](LICENSE), with third-party attributions in [NOTICE](NOTICE).
 
-Kredit: proyek ini merupakan turunan dari **ECC** oleh Affaan Mustafa
-(https://github.com/affaan-m/ecc), dengan tambahan paket skill keamanan dari
-Claude-BugHunter, security-audit-skill, dan Anthropic-Cybersecurity-Skills.
+Credits: this project derives from **ECC** by Affaan Mustafa
+(https://github.com/affaan-m/ecc), with additional security skill packs from
+Claude-BugHunter, security-audit-skill, and Anthropic-Cybersecurity-Skills.
