@@ -173,6 +173,25 @@ function reconcileInstallStateProjections(store, discoveryRecords) {
     scopedTargets: records.map(getRecordIdentity).filter(Boolean),
   };
 
+  // When several discovery scopes resolve to the same canonical install-state
+  // file (for example, the home directory also acting as the project root),
+  // the non-matching duplicate identities should be ignored rather than
+  // reported as an identity mismatch.
+  const matchedInstallStatePaths = new Set();
+  for (const record of records) {
+    if (
+      record
+      && record.exists
+      && record.state
+      && typeof record.installStatePath === 'string'
+      && record.installStatePath.length > 0
+      && getRecordIdentity(record)
+      && stateMatchesDiscoveryRecord(record.state, record)
+    ) {
+      matchedInstallStatePaths.add(path.resolve(record.installStatePath));
+    }
+  }
+
   for (const record of records) {
     const identity = getRecordIdentity(record);
     if (!identity) {
@@ -200,6 +219,12 @@ function reconcileInstallStateProjections(store, discoveryRecords) {
     }
 
     if (!stateMatchesDiscoveryRecord(record.state, record)) {
+      const sharesMatchedInstallState = typeof record.installStatePath === 'string'
+        && record.installStatePath.length > 0
+        && matchedInstallStatePaths.has(path.resolve(record.installStatePath));
+      if (sharesMatchedInstallState) {
+        continue;
+      }
       result = removeDiscoverableProjection(store, identity, result);
       result = addWarning(result, warningFor(
         record,

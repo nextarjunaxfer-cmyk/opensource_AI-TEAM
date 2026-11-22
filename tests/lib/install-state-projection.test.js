@@ -157,6 +157,33 @@ async function runTests() {
     }
   })) passed += 1; else failed += 1;
 
+  if (await test('ignores duplicate scope sharing a matched canonical install-state without an identity warning', async () => {
+    const store = await createStateStore({ dbPath: ':memory:' });
+    try {
+      // The home directory also acting as the project root resolves the
+      // claude-project target to the same canonical install-state file as
+      // claude-home. The non-matching duplicate must not raise a warning.
+      const targetRoot = '/tmp/home/.claude';
+      const state = createState({ targetRoot });
+      const result = reconcileInstallStateProjections(store, [
+        discoveryRecord(state),
+        discoveryRecord(state, {
+          targetId: 'claude-project',
+          targetRoot,
+          installStatePath: state.target.installStatePath,
+          kind: 'project',
+        }),
+      ]);
+
+      assert.strictEqual(result.status, 'ok');
+      assert.strictEqual(result.projectedCount, 1);
+      assert.strictEqual(result.warningCount, 0);
+      assert.deepStrictEqual(result.warnings, []);
+    } finally {
+      store.close();
+    }
+  })) passed += 1; else failed += 1;
+
   if (await test('removes only the discoverable stale row when canonical state is invalid', async () => {
     const store = await createStateStore({ dbPath: ':memory:' });
     try {
