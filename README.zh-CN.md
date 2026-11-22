@@ -1,5 +1,11 @@
 # opensource_AI-TEAM
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Skills](https://img.shields.io/badge/skills-1230-brightgreen.svg)](skills)
+[![Agents](https://img.shields.io/badge/agents-72-blue.svg)](agents)
+[![Commands](https://img.shields.io/badge/commands-99-lightgrey.svg)](commands)
+[![Node](https://img.shields.io/badge/node-%3E%3D18-informational.svg)](package.json)
+
 面向 AI 编码 harness 的 **agent、skill 与 command** 集合 —— 基于
 [ECC](https://github.com/affaan-m/ecc)（agent harness operating system）构建，并扩展了
 安全与红队 skill 包。
@@ -70,6 +76,27 @@ yarn test        # 校验器 + 测试套件
 ```
 
 新增工作流优先提交到 `skills/`（skills-first 策略）。
+
+## 贡献
+
+新增工作流优先提交到 `skills/`（skills-first 策略）。提案一个新 skill：
+
+1. **每个 skill 一个目录**：`skills/<skill-name>/SKILL.md`。
+2. **目录名必须与 frontmatter 中的 `name` 一致**，都使用小写加连字符；不一致会导致校验失败。
+3. **编写 frontmatter**，包含 `name` 与 `description`。description 需说明该 skill
+   做什么**以及**何时应被激活 —— agent 依据这段文字决定是否加载。
+4. **保持自包含**：流程、命令与预期输出写入 `SKILL.md`，辅助文件放在同一目录。
+5. **提 PR 前先校验**：
+
+   ```bash
+   yarn test
+   ```
+
+   校验器会检查 frontmatter、name/目录一致性与失效的交叉引用。
+6. **提交 PR**，标题遵循 conventional commit（如 `feat: add <skill-name> skill`），
+   并说明触发条件与该 skill 依赖的工具。
+
+Agent、hook、command 与文档类改动请参考 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## 许可
 

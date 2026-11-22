@@ -1,5 +1,11 @@
 # opensource_AI-TEAM
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Skills](https://img.shields.io/badge/skills-1230-brightgreen.svg)](skills)
+[![Agents](https://img.shields.io/badge/agents-72-blue.svg)](agents)
+[![Commands](https://img.shields.io/badge/commands-99-lightgrey.svg)](commands)
+[![Node](https://img.shields.io/badge/node-%3E%3D18-informational.svg)](package.json)
+
 A collection of **agents, skills, and commands** for AI coding harnesses — built on top of
 [ECC](https://github.com/affaan-m/ecc) (the agent harness operating system) and extended
 with security and red-team skill packs.
@@ -72,6 +78,32 @@ yarn test        # validators + test suite
 ```
 
 New workflow contributions land in `skills/` first (skills-first policy).
+
+## Contributing
+
+New workflows land in `skills/` first (skills-first policy). To propose a skill:
+
+1. **Create one directory per skill** under `skills/`:
+   `skills/<skill-name>/SKILL.md`.
+2. **Match the directory name to the frontmatter `name`.** Both must be the same
+   lowercase, hyphenated identifier; a mismatch fails validation.
+3. **Write frontmatter** with `name` and `description`. The description should state
+   what the skill does *and* when it should activate — that text is how agents decide
+   to load it.
+4. **Keep it self-contained.** Put the procedure, commands, and expected outputs in
+   `SKILL.md`; add supporting files in the same directory.
+5. **Validate before opening a PR:**
+
+   ```bash
+   yarn test
+   ```
+
+   The validators check frontmatter, name/directory alignment, and broken cross-references.
+6. **Open a PR** using a conventional commit title (`feat: add <skill-name> skill`) and
+   describe the trigger conditions and any tools the skill assumes.
+
+For agents, hooks, commands, and documentation changes, see
+[CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
