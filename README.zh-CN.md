@@ -28,10 +28,14 @@
 除 ECC 核心 skill 外，本仓库还以默认 skill 形式内置了三个外部 skill 包
 （合计新增 902 个 skill）：
 
-- **Claude-BugHunter**（83 个 skill）—— bug hunting 与 Web/应用安全测试
-- **security-audit-skill**（1 个 skill）—— 端到端安全审计流程
-- **Anthropic-Cybersecurity-Skills**（818 个 skill）—— 大型网络安全 skill 库：
-  取证、恶意软件分析、威胁狩猎、云/AD 安全、DFIR、合规、漏洞利用分析与红队技战术
+| 包 | Skill 数 | 覆盖范围 | 许可 |
+|---|---|---|---|
+| ECC 核心 | 328 | Agent、工作流、语言与框架审查 | MIT |
+| [Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | 83 | Bug hunting 与 Web/应用安全测试 | MIT（代码）+ CC BY 4.0（skill 内容） |
+| [security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 1 | 端到端安全审计流程 | MIT |
+| [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | 818 | 取证、恶意软件分析、威胁狩猎、云/AD 安全、DFIR、合规、漏洞利用分析与红队技战术 | Apache-2.0 |
+
+第三方包的版权声明与许可全文见 [NOTICE](NOTICE) 与 `docs/licenses/`。
 
 安全与红队 skill 仅限用于获得授权的安全测试。详见 `SECURITY.md`。
 
@@ -122,6 +126,6 @@ Agent、hook、command 与文档类改动请参考 [CONTRIBUTING.md](CONTRIBUTIN
 
 MIT —— 见 [LICENSE](LICENSE)；第三方署名见 [NOTICE](NOTICE)。
 
-致谢：本项目源自 Affaan Mustafa 的 **ECC**（https://github.com/affaan-m/ecc），
+致谢：本项目源自 Affaan Mustafa 的 **ECC**（[affaan-m/ecc](https://github.com/affaan-m/ecc)），
 并整合了 Claude-BugHunter、security-audit-skill 与 Anthropic-Cybersecurity-Skills
 三个安全 skill 包。

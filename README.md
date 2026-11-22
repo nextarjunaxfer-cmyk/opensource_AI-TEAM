@@ -28,11 +28,15 @@ What this repository ships:
 Beyond the core ECC skills, this repository bundles three external skill packs as default
 skills (902 additional skills in total):
 
-- **Claude-BugHunter** (83 skills) — bug hunting and web/application security testing
-- **security-audit-skill** (1 skill) — end-to-end security audit workflow
-- **Anthropic-Cybersecurity-Skills** (818 skills) — a large cybersecurity skill library:
-  forensics, malware analysis, threat hunting, cloud/AD security, DFIR, compliance,
-  exploit analysis, and red-team tradecraft
+| Pack | Skills | Focus | License |
+|---|---|---|---|
+| ECC core | 328 | Agents, workflows, language and framework reviews | MIT |
+| [Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | 83 | Bug hunting and web/application security testing | MIT (code) + CC BY 4.0 (skill content) |
+| [security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 1 | End-to-end security audit workflow | MIT |
+| [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | 818 | Forensics, malware analysis, threat hunting, cloud/AD security, DFIR, compliance, exploit analysis, red-team tradecraft | Apache-2.0 |
+
+Copyright notices and license texts for the third-party packs are collected in
+[NOTICE](NOTICE) and `docs/licenses/`.
 
 Security and red-team skills are intended for authorized security testing only. See
 `SECURITY.md`.
@@ -130,5 +134,5 @@ For agents, hooks, commands, and documentation changes, see
 MIT — see [LICENSE](LICENSE), with third-party attributions in [NOTICE](NOTICE).
 
 Credits: this project derives from **ECC** by Affaan Mustafa
-(https://github.com/affaan-m/ecc), with additional security skill packs from
+([affaan-m/ecc](https://github.com/affaan-m/ecc)), with additional security skill packs from
 Claude-BugHunter, security-audit-skill, and Anthropic-Cybersecurity-Skills.

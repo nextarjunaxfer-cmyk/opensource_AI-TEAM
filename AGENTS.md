@@ -1,6 +1,6 @@
 # ECC — Agent Instructions
 
-This is a **production-ready AI coding plugin** providing 72 specialized agents, 328 skills, 99 commands, and automated hook workflows for software development.
+This is a **production-ready AI coding plugin** providing 72 specialized agents, 1230 skills, 99 commands, and automated hook workflows for software development.
 
 **Version:** 2.2.3
 
@@ -20,6 +20,7 @@ This is a **production-ready AI coding plugin** providing 72 specialized agents,
 | architect | System design and scalability | Architectural decisions |
 | tdd-guide | Test-driven development | New features, bug fixes |
 | code-reviewer | Code quality and maintainability | After writing/modifying code |
+| commit-reviewer | Staged-diff commit message review and drafting | Before committing, or when writing/checking a commit message |
 | bengali-reviewer | Bengali text review | Unicode, normalization, grapheme, search, and locale correctness |
 | security-reviewer | Vulnerability detection | Before commits, sensitive code |
 | spec-miner | Brownfield spec extraction | Onboarding brownfield projects to spec-driven development |
@@ -39,6 +40,7 @@ This is a **production-ready AI coding plugin** providing 72 specialized agents,
 | python-reviewer | Python code review | Python projects |
 | django-reviewer | Django code review | Django apps, DRF APIs, ORM, migrations |
 | django-build-resolver | Django build, migration, and setup errors | Django startup, dependency, migration, collectstatic failures |
+| ruby-reviewer | Ruby and Rails code review | Ruby and Rails projects |
 | java-reviewer | Java and Spring Boot code review | Java/Spring Boot projects |
 | java-build-resolver | Java/Maven/Gradle build errors | Java build failures |
 | loop-operator | Autonomous loop execution | Run loops safely, monitor stalls, intervene |
@@ -203,12 +205,12 @@ Troubleshoot failures: check test isolation → verify mocks → fix implementat
 
 ```
 agents/          — 72 specialized subagents
-skills/          — 328 workflow skills and domain knowledge
+skills/          — 1230 workflow skills and domain knowledge
 commands/        — 99 slash commands
 hooks/           — Trigger-based automations
 rules/           — Always-follow guidelines (common + per-language)
 scripts/         — Cross-platform Node.js utilities
-mcp-configs/     — 14 MCP server configurations
+mcp-configs/     — 1 MCP config file with 37 server definitions
 tests/           — Test suite
 ```
 

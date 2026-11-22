@@ -28,11 +28,15 @@ Repo ini berisi:
 Selain skill inti ECC, repo ini menyertakan tiga paket skill eksternal yang diimpor
 sebagai skill default (total 902 skill tambahan):
 
-- **Claude-BugHunter** (83 skill) — bug hunting dan web/app security testing
-- **security-audit-skill** (1 skill) — alur audit keamanan menyeluruh
-- **Anthropic-Cybersecurity-Skills** (818 skill) — perpustakaan besar skill keamanan:
-  forensik, malware analysis, threat hunting, cloud/AD security, DFIR, compliance,
-  exploit analysis, dan red-team tradecraft
+| Paket | Skill | Cakupan | Lisensi |
+|---|---|---|---|
+| ECC core | 328 | Agent, workflow, review bahasa & framework | MIT |
+| [Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | 83 | Bug hunting dan web/app security testing | MIT (kode) + CC BY 4.0 (konten skill) |
+| [security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 1 | Alur audit keamanan menyeluruh | MIT |
+| [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | 818 | Forensik, malware analysis, threat hunting, cloud/AD security, DFIR, compliance, exploit analysis, dan red-team tradecraft | Apache-2.0 |
+
+Pemberitahuan hak cipta dan teks lisensi paket pihak ketiga ada di [NOTICE](NOTICE)
+dan `docs/licenses/`.
 
 Skill keamanan/red-team hanya untuk pengujian yang sah dan diizinkan (authorized
 security testing). Lihat `SECURITY.md`.
@@ -130,5 +134,5 @@ Untuk perubahan agent, hook, command, dan dokumentasi, lihat
 MIT — lihat [LICENSE](LICENSE), dengan atribusi pihak ketiga di [NOTICE](NOTICE).
 
 Kredit: proyek ini merupakan turunan dari **ECC** oleh Affaan Mustafa
-(https://github.com/affaan-m/ecc), dengan tambahan paket skill keamanan dari
+([affaan-m/ecc](https://github.com/affaan-m/ecc)), dengan tambahan paket skill keamanan dari
 Claude-BugHunter, security-audit-skill, dan Anthropic-Cybersecurity-Skills.
