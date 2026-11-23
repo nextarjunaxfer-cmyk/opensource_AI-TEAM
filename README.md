@@ -1,7 +1,7 @@
 # opensource_AI-TEAM
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-1230-brightgreen.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-1231-brightgreen.svg)](skills)
 [![Agents](https://img.shields.io/badge/agents-72-blue.svg)](agents)
 [![Commands](https://img.shields.io/badge/commands-99-lightgrey.svg)](commands)
 [![Node](https://img.shields.io/badge/node-%3E%3D18-informational.svg)](package.json)
@@ -16,7 +16,7 @@ What this repository ships:
 
 | Component | Count | Location |
 |---|---|---|
-| Skills | **1230** | `skills/` — each skill is a directory containing a frontmattered `SKILL.md` |
+| Skills | **1231** | `skills/` — each skill is a directory containing a frontmattered `SKILL.md` |
 | Agents | **72** | `agents/` — domain-specific subagents (planner, reviewers, build resolvers, etc.) |
 | Commands | **99** | `commands/` — compatibility slash commands |
 | Hooks | — | `hooks/` — trigger-based automations |
@@ -25,8 +25,8 @@ What this repository ships:
 
 ## Skill packs
 
-Beyond the core ECC skills, this repository bundles three external skill packs as default
-skills (902 additional skills in total):
+Beyond the core ECC skills, this repository bundles four external skill packs as default
+skills (903 additional skills in total):
 
 | Pack | Skills | Focus | License |
 |---|---|---|---|
@@ -34,6 +34,7 @@ skills (902 additional skills in total):
 | [Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | 83 | Bug hunting and web/application security testing | MIT (code) + CC BY 4.0 (skill content) |
 | [security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 1 | End-to-end security audit workflow | MIT |
 | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | 818 | Forensics, malware analysis, threat hunting, cloud/AD security, DFIR, compliance, exploit analysis, red-team tradecraft | Apache-2.0 |
+| [Grim Prompter](https://github.com/jmanico/grim-prompter) | 1 | Threat modeling and privacy review for coding agents: 36 architecture workflows plus method and analysis prompts | MIT |
 
 Copyright notices and license texts for the third-party packs are collected in
 [NOTICE](NOTICE) and `docs/licenses/`.
@@ -135,4 +136,4 @@ MIT — see [LICENSE](LICENSE), with third-party attributions in [NOTICE](NOTICE
 
 Credits: this project derives from **ECC** by Affaan Mustafa
 ([affaan-m/ecc](https://github.com/affaan-m/ecc)), with additional security skill packs from
-Claude-BugHunter, security-audit-skill, and Anthropic-Cybersecurity-Skills.
+Claude-BugHunter, security-audit-skill, Anthropic-Cybersecurity-Skills, and Grim Prompter.

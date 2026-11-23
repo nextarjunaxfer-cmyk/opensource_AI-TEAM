@@ -11,7 +11,7 @@ terms are reproduced or referenced here as required by those licenses.
 
 ## 1. ECC — agent harness operating system
 
-- Source: https://github.com/affaan-m/ecc
+- Source: <https://github.com/affaan-m/ecc>
 - Copyright (c) 2026 Affaan Mustafa
 - License: MIT
 
@@ -46,7 +46,7 @@ SOFTWARE.
 
 ## 2. Claude-BugHunter
 
-- Source: https://github.com/elementalsouls/Claude-BugHunter
+- Source: <https://github.com/elementalsouls/Claude-BugHunter>
 - Copyright (c) 2026 Sachin Sharma
 - License: dual-licensed — MIT for code (`docs/licenses/Claude-BugHunter-MIT.txt`)
   and CC BY 4.0 for documentation and skill content (`docs/licenses/CC-BY-4.0.txt`)
@@ -58,7 +58,7 @@ CC BY 4.0; attribution is provided in this file.
 
 ## 3. security-audit-skill
 
-- Source: https://github.com/cloudflare/security-audit-skill
+- Source: <https://github.com/cloudflare/security-audit-skill>
 - Copyright (c) 2025-2026 Cloudflare, Inc.
 - License: MIT (`docs/licenses/security-audit-skill-MIT.txt`)
 
@@ -68,7 +68,7 @@ CC BY 4.0; attribution is provided in this file.
 
 ## 4. Anthropic-Cybersecurity-Skills
 
-- Source: https://github.com/mukul975/Anthropic-Cybersecurity-Skills
+- Source: <https://github.com/mukul975/Anthropic-Cybersecurity-Skills>
 - Copyright 2026 mukul975 (Mahipal)
 - License: Apache License 2.0 (`docs/licenses/Apache-2.0.txt`)
 
@@ -76,6 +76,23 @@ CC BY 4.0; attribution is provided in this file.
 `docs/licenses/Apache-2.0.txt`. This project does not modify the licensed skill
 content beyond directory placement; no NOTICE file was provided by the upstream
 project.
+
+---
+
+## 5. Grim Prompter
+
+- Source: <https://github.com/jmanico/grim-prompter>
+- Copyright (c) 2026 Manicode Security
+- License: MIT (`docs/licenses/Grim-Prompter-MIT.txt`)
+
+Vendored as the single skill `skills/threat-model/`, together with the prompt library it
+loads (`runbook.md`, `quick/`, `deep/`, `methods/`, `privacy/`, `reference/`, `helpers/`,
+`start-here.md`). Upstream repository docs that the skill does not read (`README.md`,
+`AGENTS.md`, `MODELS.md`, `catalog.md`, `logo.svg`) are not included.
+
+Two links were repointed so the library works from its new location: the skill now resolves
+`LIBRARY_ROOT` to its own folder instead of the repository root, and one `start-here.md`
+link points to the upstream README. No prompt or workflow content was altered.
 
 ---
 

@@ -188,6 +188,7 @@ skills:
   - team-builder
   - terraform-patterns
   - test-collaboration
+  - threat-model
   - token-budget-advisor
   - token-card
   - typescript-patterns

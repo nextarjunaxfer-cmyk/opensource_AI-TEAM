@@ -1,7 +1,7 @@
 # opensource_AI-TEAM
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-1230-brightgreen.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-1231-brightgreen.svg)](skills)
 [![Agents](https://img.shields.io/badge/agents-72-blue.svg)](agents)
 [![Commands](https://img.shields.io/badge/commands-99-lightgrey.svg)](commands)
 [![Node](https://img.shields.io/badge/node-%3E%3D18-informational.svg)](package.json)
@@ -16,7 +16,7 @@
 
 | 组件 | 数量 | 位置 |
 |---|---|---|
-| Skill | **1230** | `skills/` —— 每个 skill 是一个目录，内含带 frontmatter 的 `SKILL.md` |
+| Skill | **1231** | `skills/` —— 每个 skill 是一个目录，内含带 frontmatter 的 `SKILL.md` |
 | Agent | **72** | `agents/` —— 按领域划分的子 agent（planner、reviewer、build resolver 等） |
 | Command | **99** | `commands/` —— 兼容性 slash command |
 | Hook | — | `hooks/` —— 基于触发器的自动化 |
@@ -25,8 +25,8 @@
 
 ## Skill 包
 
-除 ECC 核心 skill 外，本仓库还以默认 skill 形式内置了三个外部 skill 包
-（合计新增 902 个 skill）：
+除 ECC 核心 skill 外，本仓库还以默认 skill 形式内置了四个外部 skill 包
+（合计新增 903 个 skill）：
 
 | 包 | Skill 数 | 覆盖范围 | 许可 |
 |---|---|---|---|
@@ -34,6 +34,7 @@
 | [Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | 83 | Bug hunting 与 Web/应用安全测试 | MIT（代码）+ CC BY 4.0（skill 内容） |
 | [security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 1 | 端到端安全审计流程 | MIT |
 | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | 818 | 取证、恶意软件分析、威胁狩猎、云/AD 安全、DFIR、合规、漏洞利用分析与红队技战术 | Apache-2.0 |
+| [Grim Prompter](https://github.com/jmanico/grim-prompter) | 1 | 面向编码 agent 的威胁建模与隐私审查：36 个架构工作流以及方法与分析提示词 | MIT |
 
 第三方包的版权声明与许可全文见 [NOTICE](NOTICE) 与 `docs/licenses/`。
 
@@ -127,5 +128,5 @@ Agent、hook、command 与文档类改动请参考 [CONTRIBUTING.md](CONTRIBUTIN
 MIT —— 见 [LICENSE](LICENSE)；第三方署名见 [NOTICE](NOTICE)。
 
 致谢：本项目源自 Affaan Mustafa 的 **ECC**（[affaan-m/ecc](https://github.com/affaan-m/ecc)），
-并整合了 Claude-BugHunter、security-audit-skill 与 Anthropic-Cybersecurity-Skills
+并整合了 Claude-BugHunter、security-audit-skill、Anthropic-Cybersecurity-Skills 与 Grim Prompter
 三个安全 skill 包。

@@ -1,7 +1,7 @@
 # opensource_AI-TEAM
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-1230-brightgreen.svg)](skills)
+[![Skills](https://img.shields.io/badge/skills-1231-brightgreen.svg)](skills)
 [![Agents](https://img.shields.io/badge/agents-72-blue.svg)](agents)
 [![Commands](https://img.shields.io/badge/commands-99-lightgrey.svg)](commands)
 [![Node](https://img.shields.io/badge/node-%3E%3D18-informational.svg)](package.json)
@@ -16,7 +16,7 @@ Repo ini berisi:
 
 | Komponen | Jumlah | Lokasi |
 |---|---|---|
-| Skill | **1230** | `skills/` — tiap skill adalah direktori berisi `SKILL.md` berfrontmatter |
+| Skill | **1231** | `skills/` — tiap skill adalah direktori berisi `SKILL.md` berfrontmatter |
 | Agent | **72** | `agents/` — subagent khusus per domain (planner, reviewer, build resolver, dll.) |
 | Command | **99** | `commands/` — slash command kompatibilitas |
 | Hook | — | `hooks/` — otomasi berbasis trigger |
@@ -25,8 +25,8 @@ Repo ini berisi:
 
 ## Paket skill
 
-Selain skill inti ECC, repo ini menyertakan tiga paket skill eksternal yang diimpor
-sebagai skill default (total 902 skill tambahan):
+Selain skill inti ECC, repo ini menyertakan empat paket skill eksternal yang diimpor
+sebagai skill default (total 903 skill tambahan):
 
 | Paket | Skill | Cakupan | Lisensi |
 |---|---|---|---|
@@ -34,6 +34,7 @@ sebagai skill default (total 902 skill tambahan):
 | [Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | 83 | Bug hunting dan web/app security testing | MIT (kode) + CC BY 4.0 (konten skill) |
 | [security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 1 | Alur audit keamanan menyeluruh | MIT |
 | [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | 818 | Forensik, malware analysis, threat hunting, cloud/AD security, DFIR, compliance, exploit analysis, dan red-team tradecraft | Apache-2.0 |
+| [Grim Prompter](https://github.com/jmanico/grim-prompter) | 1 | Threat modeling dan review privasi untuk coding agent: 36 workflow arsitektur plus prompt metode dan analisis | MIT |
 
 Pemberitahuan hak cipta dan teks lisensi paket pihak ketiga ada di [NOTICE](NOTICE)
 dan `docs/licenses/`.
@@ -135,4 +136,4 @@ MIT — lihat [LICENSE](LICENSE), dengan atribusi pihak ketiga di [NOTICE](NOTIC
 
 Kredit: proyek ini merupakan turunan dari **ECC** oleh Affaan Mustafa
 ([affaan-m/ecc](https://github.com/affaan-m/ecc)), dengan tambahan paket skill keamanan dari
-Claude-BugHunter, security-audit-skill, dan Anthropic-Cybersecurity-Skills.
+Claude-BugHunter, security-audit-skill, Anthropic-Cybersecurity-Skills, dan Grim Prompter.
